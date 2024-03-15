@@ -26,16 +26,17 @@ for (var h in slot) {
     console.log(hour);    
     let timeDiv = $("<div>");
     timeDiv.text(slotAMPM[h]);
-    //timeDiv.addClass('time-div');
+    timeDiv.addClass("col-2 col-md-1 hour text-center py-3");
+    
 
     // 2nd column: events (big/wide)
-    let descriptionDiv = $("<div>");
+    let descriptionDiv = $("<div >");
     let textAreaForDiv = $("<textarea>");
     textAreaForDiv.attr('id', 'textarea' + hour);
     localStorage.setItem('textarea' + hour, textAreaForDiv.text)
 
     descriptionDiv.append(textAreaForDiv);
-    descriptionDiv.addClass("description");
+    descriptionDiv.addClass("col-8 col-md-10 description");
     descriptionDiv.css("width", "80%");
    
 
@@ -46,7 +47,7 @@ for (var h in slot) {
 
     // 3rd column: save button 
     let saveDiv = $("<div>");
-    saveDiv.addClass("saveBtn ");
+    saveDiv.addClass("btn saveBtn col-2 col-md-1");
     saveDiv.attr('id',  hour);
  
 
